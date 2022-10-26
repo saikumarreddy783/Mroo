@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Habitica Models/Habitica Models.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Habitica Database/Habitica Database.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Habitica API Client/Habitica API Client.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/sai/Desktop/Mrro/mroo_ios/Habitica.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Test Plans">
+      <FileRef
+         location = "group:/Users/phillip/Code/habitica-ios/UI Tests.xctestplan">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/phillip/Code/habitica-ios/Unit Tests.xctestplan">
+      </FileRef>
+      <FileRef
+         location = "group:Full Tests.xctestplan">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

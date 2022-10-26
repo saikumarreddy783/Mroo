@@ -1,0 +1,58 @@
+//
+//  StableOverviewCell.swift
+//  Habitica
+//
+//  Created by Phillip Thelen on 16.04.18.
+//  Copyright © 2018 HabitRPG Inc. All rights reserved.
+//
+
+import UIKit
+
+class StableOverviewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imageView: NetworkImageView!
+    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var countLabelHeightConstraint: NSLayoutConstraint!
+    
+    func configure(item: StableOverviewItem, ownsItem: Bool) {
+        backgroundColor = UIColor("#FAD4D4") // ThemeService.shared.theme.windowBackgroundColor
+        textLabel.text = item.text
+        countLabel.text = "\(item.numberOwned)/\(item.totalNumber)"
+        
+        countLabel.backgroundColor = UIColor("#EA5455").withAlphaComponent(0.6) // ThemeService.shared.theme.offsetBackgroundColor
+        textLabel.textColor = UIColor("#EA5455") // ThemeService.shared.theme.secondaryTextColor
+        imageView.alpha = 1.0
+        imageView.tintColor = UIColor("#EA5455") // ThemeService.shared.theme.dimmedColor
+        if item.numberOwned == 0 && !ownsItem {
+            countLabel.textColor = UIColor.white // ThemeService.shared.theme.dimmedTextColor
+            textLabel.textColor = UIColor("#EA5455") // ThemeService.shared.theme.dimmedTextColor
+            imageView.alpha = 0.5
+        } else if item.numberOwned == item.totalNumber {
+            countLabel.backgroundColor = ThemeService.shared.theme.successColor
+            countLabel.textColor = .white
+        } else {
+            countLabel.textColor = ThemeService.shared.theme.secondaryTextColor
+        }
+        if item.type == "special" || item.type == "wacky" {
+            textLabel?.numberOfLines = 2
+            countLabel?.isHidden = true
+            countLabelHeightConstraint.constant = 0
+            if item.numberOwned != 0 {
+                imageView.setImagewith(name: item.imageName)
+            } else {
+                imageView.setImagewith(name: "\(item.imageName)-outline")
+            }
+        } else {
+            textLabel?.numberOfLines = 1
+            countLabel?.isHidden = false
+            countLabelHeightConstraint.constant = 20
+            imageView.setImagewith(name: item.imageName)
+        }
+        
+        shouldGroupAccessibilityChildren = true
+        isAccessibilityElement = true
+        accessibilityLabel = item.text + " " + L10n.Accessibility.xofx(item.numberOwned, item.totalNumber)
+    }
+    
+}

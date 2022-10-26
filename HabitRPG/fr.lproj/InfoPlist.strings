@@ -1,0 +1,12 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Habitica";
+
+/* Bundle name */
+"CFBundleName" = "Habitica";
+
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "Pour pouvoir scanner un QR code, Habitica va avoir besoin d'accéder à la caméra de l'appareil.";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "Pour pouvoir scanner un QR code, Habitica va avoir besoin d'accéder à la caméra de l'appareil.";
+

@@ -1,0 +1,6 @@
+framework module Pods_Habitica_HabiticaTests {
+  umbrella header "Pods-Habitica-HabiticaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

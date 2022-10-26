@@ -1,0 +1,15 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Habitica";
+
+/* Bundle name */
+"CFBundleName" = "HabitRPG";
+
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "Om een QR-Code te kunnen scannen, heeft Habitica toegang nodig tot de camera van het apparaat. ";
+
+/* Privacy - Microphone Usage Description */
+"NSMicrophoneUsageDescription" = "Habitica heeft toegang tot je microfoon nodig om stemnotities toe te voegen";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "Om een QR-Code te kunnen scannen, heeft Habitica toegang nodig tot de camera van het apparaat. ";
+
